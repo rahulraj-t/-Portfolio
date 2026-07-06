@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rahul Raj T — Software Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="cur"></div>
+
+<!-- MOBILE NAV DRAWER -->
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-close" onclick="closeDrawer()">✕</div>
+  <a href="#hero" onclick="closeDrawer()">Home</a>
+  <a href="#about" onclick="closeDrawer()">About</a>
+  <a href="#projects" onclick="closeDrawer()">Projects</a>
+  <a href="#certs" onclick="closeDrawer()">Certs</a>
+  <a href="#contact" onclick="closeDrawer()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-avatar">RRT</div>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <!-- <li><a href="#certs">Certs</a></li> -->
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-burger" id="burger" onclick="openDrawer()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-sticky">
+    <div class="hero-inner">
+      <div class="hero-left" id="hL">
+        <div class="hero-name">Rahul Raj T</div>
+        <div class="hero-wl">SOFTWARE DEVELOPER</div>
+        <div class="hero-desc">
+Software Developer at Manappuram Finance R&D, specializing in building scalable systems and innovative software solutions. B.Tech graduate with a strong foundation in computer science and a passion for developing efficient and impactful applications.
+        </div>
+      </div>
+
+      <div class="hero-right" id="hR">
+        <div id="heroGhost"></div>
+        <div class="hero-static-card">
+          <img src="images/profile.png" alt="Rahul Raj T" class="static-card-photo">
+        </div>
+        <div class="hero-circle" id="hCircle" style="opacity:0;pointer-events:none"></div>
+      </div>
+    </div>
+
+    <div class="hero-toggle">
+      <span class="tlabel" id="tlL">Dark</span>
+      <div class="tpill" onclick="toggleMode()"><div class="tknob"></div></div>
+      <span class="tlabel" id="tlR">Light</span>
+    </div>
+  </div>
+</section>
+
+<!-- FLY CARD (desktop only) -->
+<div id="flyCard">
+  <div class="card-face front">
+    <img src="images/profile.png" alt="Profile Photo" class="card-photo">
+    <div class="card-init"></div>
+    <div class="card-label">
+      <span></span>
+    </div>
+  </div>
+
+  <div class="card-face back">
+    <div class="card-init"></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-left reveal">
+    <h2 class="about-title">WHAT I CAN<br>DO FOR YOU</h2>
+
+    <p class="about-sub">
+      Software developer and R&amp;D engineer passionate about crafting meaningful digital products through clean code and smart systems.
+    </p>
+
+    <ul class="svc-list">
+
+      <!-- 01 -->
+      <li class="svc-item">
+        <div class="svc-row" onclick="toggleSvc(this)">
+          <span class="svc-num">01</span>
+          <span class="svc-name">Machine Learning</span>
+          <i class="fa-solid fa-chevron-up svc-icon"></i>
+        </div>
+        <div class="svc-body">
+          <p>ML models for classification, prediction, and NLP — turning raw data into actionable intelligence for real business problems.</p>
+        </div>
+      </li>
+
+      <!-- 02 -->
+      <li class="svc-item">
+        <div class="svc-row" onclick="toggleSvc(this)">
+          <span class="svc-num">02</span>
+          <span class="svc-name">Deep Learning</span>
+          <i class="fa-solid fa-chevron-up svc-icon"></i>
+        </div>
+        <div class="svc-body">
+          <p>Designing and training deep learning models using TensorFlow and PyTorch for computer vision, face recognition, image classification, object detection, OCR, and other AI-driven applications.</p>
+        </div>
+      </li>
+
+      <!-- 03 -->
+      <li class="svc-item">
+        <div class="svc-row" onclick="toggleSvc(this)">
+          <span class="svc-num">03</span>
+          <span class="svc-name">GEN AI</span>
+          <i class="fa-solid fa-chevron-up svc-icon"></i>
+        </div>
+        <div class="svc-body">
+          <p>Building intelligent AI solutions using Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), AI agents, prompt engineering, and model integration to automate workflows and deliver smarter user experiences.</p>
+        </div>
+      </li>
+
+      <!-- 04 -->
+      <li class="svc-item">
+        <div class="svc-row" onclick="toggleSvc(this)">
+          <span class="svc-num">04</span>
+          <span class="svc-name">R&amp;D &amp; Prototyping</span>
+          <i class="fa-solid fa-chevron-up svc-icon"></i>
+        </div>
+        <div class="svc-body">
+          <p>Rapid prototyping of new ideas — bridging research and product through fast iteration and hands-on experimentation.</p>
+        </div>
+      </li>
+
+    </ul>
+
+    <div class="soc-row">
+      <a href="https://www.linkedin.com/in/rahul-raj-t/" target="_blank" class="soc-btn">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+
+      <a href="https://github.com/Rahul2924" target="_blank" class="soc-btn">
+        <i class="fa-brands fa-github"></i>
+      </a>
+
+      <a href="https://www.instagram.com/rahul_.r.t" class="soc-btn">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="mailto:rahulrajt08@gmail.com" class="soc-btn">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="about-right" id="aRight">
+    <div class="about-dot"></div>
+    <div id="aboutGhost"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="reveal">
+    <div class="proj-title">FEATURED PROJECTS<div class="proj-ldot"></div></div>
+    <p class="proj-sub">Five running processes, one core. Select a node to inspect what it does.</p>
+  </div>
+
+  <div class="sysmap-wrap reveal">
+    <div class="sysmap-diagram" id="sysmapDiagram">
+      <svg class="sysmap-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+        <path id="sp0" class="sysmap-line active" d="M400,300 L400,70"></path>
+        <path id="sp1" class="sysmap-line" d="M400,300 L618.7,228.9"></path>
+        <path id="sp2" class="sysmap-line" d="M400,300 L535.2,486.1"></path>
+        <path id="sp3" class="sysmap-line" d="M400,300 L264.8,486.1"></path>
+        <path id="sp4" class="sysmap-line" d="M400,300 L181.3,228.9"></path>
+        <circle r="4" class="sysmap-particle"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#sp0"></mpath></animateMotion></circle>
+        <circle r="4" class="sysmap-particle"><animateMotion dur="3.1s" repeatCount="indefinite"><mpath href="#sp1"></mpath></animateMotion></circle>
+        <circle r="4" class="sysmap-particle"><animateMotion dur="2.8s" repeatCount="indefinite"><mpath href="#sp2"></mpath></animateMotion></circle>
+        <circle r="4" class="sysmap-particle"><animateMotion dur="3.4s" repeatCount="indefinite"><mpath href="#sp3"></mpath></animateMotion></circle>
+        <circle r="4" class="sysmap-particle"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#sp4"></mpath></animateMotion></circle>
+      </svg>
+
+      <div class="sysmap-core">
+        <div class="sysmap-core-ring"></div>
+        <div class="sysmap-core-label">RRT</div>
+        <div class="sysmap-core-sub">Core</div>
+      </div>
+
+      <button class="sysmap-node active" data-i="0" style="left:50%;top:11.67%" onclick="selectNode(0)" aria-label="Proxy Detection System">
+        <i class="fa-solid fa-user-secret"></i><span class="snode-idx">01</span>
+      </button>
+      <button class="sysmap-node" data-i="1" style="left:77.34%;top:38.15%" onclick="selectNode(1)" aria-label="Liveness Detection System">
+        <i class="fa-solid fa-eye"></i><span class="snode-idx">02</span>
+      </button>
+      <button class="sysmap-node" data-i="2" style="left:66.9%;top:81.02%" onclick="selectNode(2)" aria-label="Human Intrusion Detection System">
+        <i class="fa-solid fa-triangle-exclamation"></i><span class="snode-idx">03</span>
+      </button>
+      <button class="sysmap-node" data-i="3" style="left:33.1%;top:81.02%" onclick="selectNode(3)" aria-label="RAG Model Chatbot">
+        <i class="fa-solid fa-robot"></i><span class="snode-idx">04</span>
+      </button>
+      <button class="sysmap-node" data-i="4" style="left:22.66%;top:38.15%" onclick="selectNode(4)" aria-label="AI PPT Generation System">
+        <i class="fa-solid fa-file-powerpoint"></i><span class="snode-idx">05</span>
+      </button>
+    </div>
+
+    <div class="sysmap-panel" id="sysmapPanel"></div>
+  </div>
+</section>
+
+
+<!-- CERTS -->
+<section id="certs">
+  <div class="certs-inner">
+    <h2 class="ctitle reveal">CERTIFICATIONS</h2>
+    <p class="ctitle-sub reveal">Tap a card to flip it and see the credential.</p>
+
+    <div class="cgrid reveal">
+      <div class="ccard" data-i="0" onclick="this.classList.toggle('flipped')">
+        <div class="ccard-inner">
+          <div class="ccard-front">
+            <i class="fa-solid fa-award cicon"></i>
+            <div class="corg">Datamites</div>
+            <div class="cname">Certified AI Expert</div>
+            <div class="cflip-hint"><i class="fa-solid fa-rotate"></i> Tap to flip</div>
+          </div>
+          <div class="ccard-back">
+            <img src="images/DATAMITES AI.jpg" alt="Certified AI Expert" class="cb-img">
+            <div class="cb-overlay">
+              <div>
+                <div class="cb-overlay-name">Certified AI Expert</div>
+                <div class="cb-overlay-org">Datamites</div>
+              </div>
+              <span class="cb-tap">Tap to flip back</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ccard" data-i="1" onclick="this.classList.toggle('flipped')">
+        <div class="ccard-inner">
+          <div class="ccard-front">
+            <i class="fa-solid fa-award cicon"></i>
+            <div class="corg">Datamites</div>
+            <div class="cname">Certified Data Scientist</div>
+            <div class="cflip-hint"><i class="fa-solid fa-rotate"></i> Tap to flip</div>
+          </div>
+          <div class="ccard-back">
+            <img src="images/DATAMITES CDS.jpg" alt="Certified Data Scientist" class="cb-img">
+            <div class="cb-overlay">
+              <div>
+                <div class="cb-overlay-name">Certified Data Scientist</div>
+                <div class="cb-overlay-org">Datamites</div>
+              </div>
+              <span class="cb-tap">Tap to flip back</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ccard" data-i="2" onclick="this.classList.toggle('flipped')">
+        <div class="ccard-inner">
+          <div class="ccard-front">
+            <i class="fa-solid fa-award cicon"></i>
+            <div class="corg">Nasscom</div>
+            <div class="cname">Nasscom Certified Data Scientist</div>
+            <div class="cflip-hint"><i class="fa-solid fa-rotate"></i> Tap to flip</div>
+          </div>
+          <div class="ccard-back">
+            <img src="images/Nasscom CDS.jpg" alt="Nasscom Certified Data Scientist" class="cb-img">
+
+            <div class="cb-overlay">
+              <div>
+                <div class="cb-overlay-name">Nasscom Certified Data Scientist</div>
+                <div class="cb-overlay-org">Nasscom</div>
+              </div>
+              <span class="cb-tap">Tap to flip back</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ccard" data-i="3" onclick="this.classList.toggle('flipped')">
+        <div class="ccard-inner">
+          <div class="ccard-front">
+            <i class="fa-solid fa-award cicon"></i>
+            <div class="corg">Nasscom</div>
+            <div class="cname">Nasscom AI Engineer</div>
+            <div class="cflip-hint"><i class="fa-solid fa-rotate"></i> Tap to flip</div>
+          </div>
+          <div class="ccard-back">
+            <img src="images/Nasscom AI.jpg" alt="Nasscom AI Engineer" class="cb-img">
+            <div class="cb-overlay">
+              <div>
+                <div class="cb-overlay-name">Nasscom AI Engineer</div>
+                <div class="cb-overlay-org">Nasscom</div>
+              </div>
+              <span class="cb-tap">Tap to flip back</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-img-wrap reveal">
+    <div class="contact-img"><div class="contact-init">RRT</div></div>
+    <div class="c-circle">Hi</div>
+    <div class="c-dot"></div>
+  </div>
+
+  <div class="reveal d2">
+    <h2 class="ctact-title">LET'S WORK<br>TOGETHER</h2>
+    <p class="ctact-sub">
+      Let's build something impactful — whether it's a system, a tool, or your next big idea.
+    </p>
+
+    <div id="msgOk" class="msg-ok"></div>
+    <div id="msgErr" class="msg-err"></div>
+
+    <form id="contactForm" action="https://formspree.io/f/mykqovnn" method="POST">
+
+      <div class="cf-row">
+        <div class="cf-g">
+          <label class="cf-lbl">Name</label>
+          <input class="cf-inp" id="cfn" name="name" type="text" placeholder=" " required>
+        </div>
+
+        <div class="cf-g">
+          <label class="cf-lbl">Email</label>
+          <input class="cf-inp" id="cfe" name="email" type="email" placeholder=" " required>
+        </div>
+      </div>
+
+      <div class="cf-g">
+        <label class="cf-lbl">Phone Number</label>
+        <input class="cf-inp" id="cph" name="number" type="text" placeholder=" " >
+      </div>
+
+      <div class="cf-g">
+        <label class="cf-lbl">Service Needed?</label>
+        <select class="cf-sel" id="cfs" name="service">
+          <option value="">Select...</option>
+          <option>Machine Learning</option>
+          <option>Deep Learning</option>
+          <option>Gen AI</option>
+          <option>R&amp;D Collaboration</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="cf-g">
+        <label class="cf-lbl">What Can I Help You...</label>
+        <textarea class="cf-inp cf-ta" id="cfm" name="content" placeholder="Hello, I'd like to enquire about..."></textarea>
+      </div>
+
+      <button type="submit" class="cf-btn">SUBMIT</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo">Rahul<span>.</span></div>
+  <p class="fcopy">© 2025 Rahul Raj T. All Rights Reserved.</p>
+  <div class="fsocs">
+    <a href="https://www.linkedin.com/in/rahul-raj-t/" target="_blank" class="fsoc"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://github.com/Rahul2924" target="_blank" class="fsoc"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.instagram.com/rahul_.r.t" class="fsoc"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
